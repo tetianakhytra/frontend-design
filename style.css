@@ -1,16 +1,153 @@
+
 :root {
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-400: #9ca3af;
-    --gray-500: #6b7280;
-    --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* Font scale (Utopia Type Scale, fluid) */
+  --step--2: clamp(0.69rem, 0.65rem + 0.15vw, 0.74rem);
+  --step--1: clamp(0.83rem, 0.79rem + 0.22vw, 0.92rem);
+  --step-0: clamp(1rem, 0.94rem + 0.31vw, 1.13rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.43vw, 1.35rem);
+  --step-2: clamp(1.44rem, 1.28rem + 0.59vw, 1.62rem);
+  --step-3: clamp(1.73rem, 1.48rem + 0.8vw, 1.94rem);
+  --step-4: clamp(2.07rem, 1.71rem + 1.06vw, 2.33rem);
+  --step-5: clamp(2.49rem, 1.97rem + 1.4vw, 2.8rem);
+
+  /* Spacing scale (Utopia Space Scale) */
+  --space-3xs: clamp(0.25rem, 0.22rem + 0.12vw, 0.3rem);
+  --space-2xs: clamp(0.38rem, 0.33rem + 0.18vw, 0.44rem);
+  --space-xs: clamp(0.56rem, 0.49rem + 0.26vw, 0.67rem);
+  --space-s: clamp(0.84rem, 0.73rem + 0.39vw, 1rem);
+  --space-m: clamp(1.13rem, 0.98rem + 0.52vw, 1.33rem);
+  --space-l: clamp(1.69rem, 1.46rem + 0.79vw, 2rem);
+  --space-xl: clamp(2.25rem, 1.94rem + 1.18vw, 2.67rem);
+  --space-2xl: clamp(3.38rem, 2.91rem + 1.77vw, 4rem);
 }
 
 body {
-    font-family: system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: var(--step-0);
+  line-height: 1.7;
+  color: var(--gray-800);
+  background-color: var(--gray-50);
+  margin: var(--space-l);
+}
+
+article {
+  max-width: 65ch;
+  margin-inline: auto;
+  padding: var(--space-l);
+  background: var(--gray-100);
+  border-radius: 12px;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: var(--gray-900);
+  line-height: 1.2;
+  font-weight: 700;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-s);
+}
+
+h1 {
+  font-size: var(--step-5);
+}
+
+h2 {
+  font-size: var(--step-3);
+  color: var(--gray-800);
+}
+
+h3 {
+  font-size: var(--step-2);
+  color: var(--gray-700);
+}
+
+h4 {
+  font-size: var(--step-1);
+  color: var(--gray-600);
+}
+
+/* Paragraphs and text */
+p {
+  margin-bottom: var(--space-m);
+  color: var(--gray-700);
+}
+
+.text-lead {
+  font-size: var(--step-1);
+  line-height: 1.8;
+  color: var(--gray-800);
+}
+
+.text-small {
+  font-size: var(--step--1);
+  color: var(--gray-600);
+}
+
+/* Links */
+a {
+  color: var(--gray-700);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--gray-900);
+}
+
+/* Images and figures */
+figure {
+  margin: var(--space-l) 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  font-size: var(--step--1);
+  color: var(--gray-500);
+  margin-top: var(--space-xs);
+  text-align: center;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: var(--space-l);
+  margin-bottom: var(--space-m);
+}
+
+li {
+  margin-bottom: var(--space-xs);
+}
+
+/* Code & emphasis */
+code {
+  font-family: "Source Code Pro", monospace;
+  background-color: var(--gray-200);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  color: var(--gray-800);
+}
+
+em {
+  color: var(--gray-700);
+  font-style: italic;
+}
+
+strong {
+  color: var(--gray-900);
+  font-weight: 600;
 }
